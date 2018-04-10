@@ -114,6 +114,18 @@ public interface BtcdClient {
 
 	Long getHashesPerSec() throws BitcoindException, CommunicationException;
 
+	/**
+	 * Since 0.16.0 this method is not available.
+	 * It is recommended that the more specific RPCs are used:
+	 * * getblockchaininfo
+	 * * getnetworkinfo
+	 * * getwalletinfo
+	 * * getmininginfo
+	 * @return Info object
+	 * @throws BitcoindException
+	 * @throws CommunicationException
+	 */
+	@Deprecated
 	Info getInfo() throws BitcoindException, CommunicationException;
 
 	MemPoolInfo getMemPoolInfo() throws BitcoindException, CommunicationException;
