@@ -324,6 +324,9 @@ public interface BtcdClient {
 	String sendToAddress(String toAddress, BigDecimal amount) throws BitcoindException, 
 			CommunicationException;
 
+	String sendToStealthAddress(String toAddress, BigDecimal amount) throws BitcoindException,
+			CommunicationException;
+
 	String sendToAddress(String toAddress, BigDecimal amount, String comment) 
 			throws BitcoindException, CommunicationException;
 

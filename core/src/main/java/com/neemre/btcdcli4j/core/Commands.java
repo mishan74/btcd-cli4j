@@ -76,6 +76,7 @@ public enum Commands {
 	SEND_MANY("sendmany", 2, 4),
 	SEND_RAW_TRANSACTION("sendrawtransaction", 1, 2),
 	SEND_TO_ADDRESS("sendtoaddress", 2, 4),
+	SEND_TO_STEALTH_ADDRESS("sendtostealthaddress", 2, 4),
 	SET_ACCOUNT("setaccount", 2, 2),
 	SET_GENERATE("setgenerate", 1, 2),
 	SET_TX_FEE("settxfee", 1, 1),

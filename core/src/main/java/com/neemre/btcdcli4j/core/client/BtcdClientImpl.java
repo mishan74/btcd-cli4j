@@ -1060,6 +1060,16 @@ public class BtcdClientImpl implements BtcdClient {
 	}
 
 	@Override
+	public String sendToStealthAddress(String toAddress, BigDecimal amount) throws BitcoindException,
+			CommunicationException {
+		amount = amount.setScale(Defaults.DECIMAL_SCALE, Defaults.ROUNDING_MODE);
+		List<Object> params = CollectionUtils.asList(toAddress, amount);
+		String transactionIdJson = rpcClient.execute(Commands.SEND_TO_STEALTH_ADDRESS.getName(), params);
+		String transactionId = rpcClient.getParser().parseString(transactionIdJson);
+		return transactionId;
+	}
+
+	@Override
 	public String sendToAddress(String toAddress, BigDecimal amount, String comment) 
 			throws BitcoindException, CommunicationException {
 		amount = amount.setScale(Defaults.DECIMAL_SCALE, Defaults.ROUNDING_MODE);
