@@ -18,6 +18,7 @@ public enum Commands {
 	CREATE_RAW_TRANSACTION("createrawtransaction", 2, 2),
 	DECODE_RAW_TRANSACTION("decoderawtransaction", 1, 1),
 	DECODE_SCRIPT("decodescript", 1, 1),
+	DECODE_STEALTH_ADDRESS("decodestealthaddress", 1, 1),
 	DUMP_PRIV_KEY("dumpprivkey", 1, 1),
 	DUMP_WALLET("dumpwallet", 1, 1),
 	ENCRYPT_WALLET("encryptwallet", 1, 1),
