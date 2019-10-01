@@ -62,6 +62,8 @@ public interface BtcdClient {
 
 	BigDecimal getBalance() throws BitcoindException, CommunicationException;
 
+	Balances getBalances() throws BitcoindException, CommunicationException;
+
 	BigDecimal getBalance(String account) throws BitcoindException, CommunicationException;
 
 	BigDecimal getBalance(String account, Integer confirmations) throws BitcoindException, 

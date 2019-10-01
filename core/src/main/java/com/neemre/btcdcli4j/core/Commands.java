@@ -29,6 +29,7 @@ public enum Commands {
 	GET_ADDED_NODE_INFO("getaddednodeinfo", 1, 2),
 	GET_ADDRESSES_BY_ACCOUNT("getaddressesbyaccount", 1, 1),
 	GET_BALANCE("getbalance", 0, 3),
+	GET_BALANCES("getbalances", 0, 0),
 	GET_BEST_BLOCK_HASH("getbestblockhash", 0, 0),
 	GET_BLOCK("getblock", 1, 2),
 	GET_BLOCK_CHAIN_INFO("getblockchaininfo", 0, 0),
