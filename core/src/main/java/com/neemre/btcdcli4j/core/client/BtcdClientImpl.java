@@ -260,7 +260,7 @@ public class BtcdClientImpl implements BtcdClient {
 
 	@Override
 	public Balances getBalances() throws BitcoindException, CommunicationException {
-		String balanceJson = rpcClient.execute(Commands.GET_BALANCE.getName());
+		String balanceJson = rpcClient.execute(Commands.GET_BALANCES.getName());
 		Balances balances = rpcClient.getMapper().mapToEntity(balanceJson, Balances.class);
 		return balances;
 	}
