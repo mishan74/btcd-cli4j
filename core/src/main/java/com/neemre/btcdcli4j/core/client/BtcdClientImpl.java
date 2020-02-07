@@ -243,6 +243,16 @@ public class BtcdClientImpl implements BtcdClient {
 	}
 
 	@Override
+	public AddressBalance getAddressBalance(String address) throws BitcoindException,
+			CommunicationException {
+		List<Object> params = CollectionUtils.asList(address);
+		String addressesJson = rpcClient.execute(Commands.GET_ADDRESS_BALANCE.getName(),
+				params);
+		return rpcClient.getMapper().mapToEntity(addressesJson,
+				AddressBalance.class);
+	}
+
+	@Override
 	public List<String> getAddressesByAccount(String account) throws BitcoindException,
 			CommunicationException {
 		String addressesJson = rpcClient.execute(Commands.GET_ADDRESSES_BY_ACCOUNT.getName(),

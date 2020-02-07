@@ -26,6 +26,7 @@ public enum Commands {
 	ESTIMATE_PRIORITY("estimatepriority", 1, 1),
 	GET_ACCOUNT("getaccount", 1, 1),
 	GET_ACCOUNT_ADDRESS("getaccountaddress", 1, 1),
+	GET_ADDRESS_BALANCE("getaddressbalance", 1, 1),
 	GET_ADDED_NODE_INFO("getaddednodeinfo", 1, 2),
 	GET_ADDRESSES_BY_ACCOUNT("getaddressesbyaccount", 1, 1),
 	GET_BALANCE("getbalance", 0, 3),

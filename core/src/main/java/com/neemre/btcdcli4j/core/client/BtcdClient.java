@@ -37,6 +37,8 @@ public interface BtcdClient {
 	DecodedStealthAddress decodeStealthAddress(String stealthAddress) throws BitcoindException,
 			CommunicationException;
 
+	AddressBalance getAddressBalance(String adderssBalance) throws BitcoindException, CommunicationException;
+
 	String dumpPrivKey(String address) throws BitcoindException, CommunicationException;
 
 	void dumpWallet(String filePath) throws BitcoindException, CommunicationException;
